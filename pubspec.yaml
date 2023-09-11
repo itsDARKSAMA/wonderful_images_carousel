@@ -1,0 +1,20 @@
+name: wonderful_images_carousel
+description: A wonderful flutter package to display images in carousel
+version: 0.0.1
+homepage: https://github.com/itsDARKSAMA/wonderful_images_carousel
+
+environment:
+  sdk: ">=3.1.1 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  cached_network_image: ^3.2.3
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
