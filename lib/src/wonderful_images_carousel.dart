@@ -54,8 +54,17 @@ class WonderfulImagesCarousel extends StatefulWidget {
   /// [edgeMargin] is the margin of the container , default is 16
   final EdgeInsetsGeometry? edgeMargin;
 
-  /// [indicatorPositioned] is the positioned of the indicator , default is bottom: 20 , right: 20
-  final Positioned? indicatorPositioned;
+  /// [indicatorTopPosition] is the top position of the indicator , default is nothing
+  final double? indicatorTopPosition;
+
+  /// [indicatorRightPosition] is the right position of the indicator , default is 25
+  final double? indicatorRightPosition;
+
+  /// [indicatorBottomPosition] is the bottom position of the indicator , default is 25
+  final double? indicatorBottomPosition;
+
+  /// [indicatorLeftPosition] is the left position of the indicator , default is nothing
+  final double? indicatorLeftPosition;
 
   const WonderfulImagesCarousel(
       {super.key,
@@ -75,7 +84,10 @@ class WonderfulImagesCarousel extends StatefulWidget {
       this.slideCurve,
       this.loadingIndicatorWidget,
       this.edgeMargin,
-      this.indicatorPositioned});
+      this.indicatorTopPosition,
+      this.indicatorRightPosition,
+      this.indicatorBottomPosition,
+      this.indicatorLeftPosition});
 
   @override
   State<WonderfulImagesCarousel> createState() =>
@@ -154,10 +166,10 @@ class _WonderfulImagesCarouselState extends State<WonderfulImagesCarousel> {
           /// [_generatePageView] is a method to generate the page view
           _generatePageView(),
           Positioned(
-            bottom: widget.indicatorPositioned?.bottom ?? 20,
-            right: widget.indicatorPositioned?.right ?? 20,
-            top: widget.indicatorPositioned?.top ?? 0,
-            left: widget.indicatorPositioned?.left ?? 0,
+            top: widget.indicatorTopPosition,
+            right: widget.indicatorRightPosition ?? 25,
+            bottom: widget.indicatorBottomPosition ?? 25,
+            left: widget.indicatorLeftPosition,
 
             /// [_generateIndicator] is a method to generate the indicator
             child: _generateIndicator(),
