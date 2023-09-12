@@ -51,6 +51,9 @@ class WonderfulImagesCarousel extends StatefulWidget {
   /// [loadingIndicatorWidget] is the widget to show while loading the image from the network
   final Widget? loadingIndicatorWidget;
 
+  /// [onErrorWidget] is the widget to show if there is an error while loading the image from the network , default is an error icon with a red color
+  final Widget? onErrorWidget;
+
   /// [edgeMargin] is the margin of the container , default is 16
   final EdgeInsetsGeometry? edgeMargin;
 
@@ -225,6 +228,9 @@ class _WonderfulImagesCarouselState extends State<WonderfulImagesCarousel> {
               const Center(
                 child: CircularProgressIndicator(),
               ),
+          errorWidget: (context, url, error) =>
+              widget.onErrorWidget ??
+              const Icon(Icons.error, color: Colors.red),
           fit: BoxFit.cover,
           height: widget.height ?? 200,
           width: widget.width ?? double.infinity,

@@ -163,5 +163,6 @@ import 'package:wonderful_images_carousel/wonderful_images_carousel.dart';
 | slideDuration            | duration of the slide                                   | 300 milliseconds            |
 | slideCurve               | curve of the slide                                      | Curves.easeIn               |
 | loadingIndicatorWidget   | widget to show while loading the image from the network | CircularProgressIndicator() |
+| onErrorWidget   | is the widget to show if there is an error while loading the image from the network | error icon with a red color |
 | edgeMargin               | margin of the container                                 | 16                          |
 | indicatorPositioned      | positioned of the indicator                             | bottom: 20 , right: 20      |
