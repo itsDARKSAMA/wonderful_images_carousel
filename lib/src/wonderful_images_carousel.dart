@@ -86,6 +86,7 @@ class WonderfulImagesCarousel extends StatefulWidget {
       this.slideDuration,
       this.slideCurve,
       this.loadingIndicatorWidget,
+	  this.onErrorWidget,
       this.edgeMargin,
       this.indicatorTopPosition,
       this.indicatorRightPosition,
